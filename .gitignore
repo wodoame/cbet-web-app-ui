@@ -1,0 +1,8 @@
+node_modules/
+color-palette.txt
+package-lock.json
+package.json
+tailwind.config.js
+UI starter concept.jpg
+dist/input.css
+core

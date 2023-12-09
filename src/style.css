@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url("./Poppins-Medium.ttf");
+}
+@font-face {
+    font-family: 'Poppins-Semibold';
+    src: url("./Poppins-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url("./Poppins-Light.ttf");
+}
+
+
+.text{
+    font-family:'Poppins-Semibold';
+}
+
+.light-text{
+    font-family: 'Poppins-Light';
+}
+:root{
+    /* Colors */
+    --body-color:#e4e9f7; 
+    --sidebar-color:#fff; 
+    --secondary-color:#FF6D91;
+    /* --primary-color:#FF6D91; */
+    --tertiary-color:#5CCDF9;
+    --primary-color:#675AE6; 
+    --primary-color-light:#f6f5ff; 
+    --toggle-color:#ddd; 
+    --text-color:#707070; 
+
+    /* Transition */
+
+    --trans-02: all 0.2s ease; 
+    --trans-03: all 0.3s ease; 
+    --trans-04: all 0.4s ease; 
+    --trans-05: all 0.5s ease; 
+    --trans-06: all 0.6s ease; 
+}
+
+*{
+    box-sizing:border-box; 
+    margin:0; 
+    padding:0;
+    font-family:'Poppins-Medium';
+    /* color:var(--text-color); */
+}
+
+body{
+    height:100vh; 
+    background:var(--body-color);
+}
+
+svg{
+    fill:var(--primary-color);
+}
+
+.sidebar{
+    position:fixed;
+    top:0; 
+    left:0; 
+    height:100%;
+    width:250px; 
+    padding:10px 14px;
+    background:var(--sidebar-color);
+    transition:var(--trans-04);
+}
+
+.sidebar.close{
+    width:70px;
+}
+
+
+.text{
+    transition:var(--trans-02);
+    opacity:1;
+}
+.sidebar.close .text{
+    opacity:0;
+}
+
+header{
+    position:relative;
+    /* outline:2px solid black; */
+    height:30px;
+}
+header .toggle{
+    position:absolute;
+    top:50%;
+    right:-25px;
+    transform:translateY(-50%) rotate(180deg);
+    height:25px; 
+    width:25px;
+    background:var(--primary-color);
+    display:flex; 
+    justify-content: center;
+    align-items:center;
+    border-radius:50%;
+    cursor:pointer;
+    transition:var(--trans-03);
+}
+
+.sidebar.close header .toggle{
+    transform: translateY(-50%);
+}
+
+
+li{
+    height:50px; 
+    margin-top: 10px;
+    list-style: none;
+    border-radius:6px; 
+    padding:0.5rem !important;
+    display:flex !important;
+}
+
+li:hover{
+    background:var(--primary-color-light)
+}
+
+li a{
+    text-decoration:none;
+}
+
+.search{
+    background:var(--primary-color-light);
+    /* outline:2px solid orange; */
+}
+
+
+.icon{
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.search, li a{
+    display:flex; 
+    align-items:center;
+    gap:1rem;
+}
+
+.search input{
+    height:100%;
+    width:100%;
+    outline:none;
+    border:none;
+    background:transparent;
+}
